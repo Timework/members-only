@@ -1,0 +1,12 @@
+<%= form_for @post do |f| %>
+<% if @post.errors.any? %>
+<ul>
+<% @post.errors.full_messages.each do |message| %>
+<li><%= message %></li>
+<% end %>
+</ul>
+<% end %>
+Title: <%= f.text_field :title, placeholder: "Title Here" %> <br />
+Body: <%= f.text_area :body,:cols => 30, :rows => 10  %> <br />
+<%= f.submit %>
+<% end %>

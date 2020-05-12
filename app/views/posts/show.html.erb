@@ -1,0 +1,12 @@
+<p>
+  <strong>Post:</strong>
+  <%= @post.title %>
+  <br>
+  <%= @post.body %>
+  <br>
+  <% if user_signed_in? %>
+  <strong>Written by:</strong>
+    <%= @post.user.name %>
+    <% end %>
+</p>
+<%= link_to "<< Back to Posts List", posts_path %>
